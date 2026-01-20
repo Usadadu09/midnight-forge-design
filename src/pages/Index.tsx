@@ -71,14 +71,14 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* Sand Section */}
-      <section className="bg-trinity-sand py-24">
+      {/* Teal/Gold Section */}
+      <section className="bg-mamazon-gold py-24">
         <div className="container mx-auto px-6">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <h2 className="font-display text-4xl md:text-5xl tracking-wider text-trinity-charcoal-dark mb-6">
+            <h2 className="font-display text-4xl md:text-5xl tracking-wider text-mamazon-charcoal-dark mb-6">
               YOUR PREFERRED SOURCING PARTNER
             </h2>
-            <p className="text-trinity-charcoal/80 leading-relaxed">
+            <p className="text-mamazon-charcoal/80 leading-relaxed">
               We enable you to find the best in manufacturing and product development, 
               utilizing our global network of suppliers to deliver exceptional quality 
               at competitive prices. From concept to delivery, we ensure seamless 
@@ -106,7 +106,7 @@ const Index = () => {
       </section>
 
       {/* Image Slider */}
-      <section className="relative py-24 bg-trinity-charcoal">
+      <section className="relative py-24 bg-mamazon-charcoal">
         <div className="container mx-auto px-6">
           <div className="relative overflow-hidden rounded-lg">
             <motion.div
@@ -165,12 +165,12 @@ const Index = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="bg-trinity-sand flex items-center justify-center p-12 md:p-16">
+        <div className="bg-mamazon-gold flex items-center justify-center p-12 md:p-16">
           <AnimatedSection className="text-center">
-            <h3 className="font-display text-3xl md:text-4xl tracking-wider text-trinity-charcoal-dark mb-6">
+            <h3 className="font-display text-3xl md:text-4xl tracking-wider text-mamazon-charcoal-dark mb-6">
               QUALITY CRAFTSMANSHIP
             </h3>
-            <p className="text-trinity-charcoal/80 mb-8 max-w-md">
+            <p className="text-mamazon-charcoal/80 mb-8 max-w-md">
               Our commitment to excellence ensures every product meets the highest 
               standards of quality and craftsmanship.
             </p>
@@ -178,7 +178,7 @@ const Index = () => {
               href="/products"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block px-8 py-3 bg-trinity-charcoal-dark text-foreground font-display tracking-wider uppercase hover:bg-trinity-red transition-colors"
+              className="inline-block px-8 py-3 bg-mamazon-charcoal-dark text-foreground font-display tracking-wider uppercase hover:bg-mamazon-teal transition-colors"
             >
               Explore Products
             </motion.a>

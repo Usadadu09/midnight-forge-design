@@ -34,11 +34,8 @@ export const Header = () => {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="trinity-logo">
-          TRINITY
-          <span className="block text-[10px] font-normal tracking-[0.3em] -mt-1">
-            SERVICES
-          </span>
+        <Link to="/" className="mamazon-logo">
+          MAMAZON
         </Link>
 
         {/* Desktop Navigation */}
@@ -49,7 +46,7 @@ export const Header = () => {
               to={item.path}
               className={`nav-link ${
                 location.pathname === item.path
-                  ? "text-trinity-sand active"
+                  ? "text-mamazon-gold active"
                   : "text-foreground/80 hover:text-foreground"
               }`}
             >
@@ -84,7 +81,7 @@ export const Header = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`nav-link py-2 ${
                     location.pathname === item.path
-                      ? "text-trinity-sand"
+                      ? "text-mamazon-gold"
                       : "text-foreground/80"
                   }`}
                 >

@@ -6,7 +6,7 @@ const teamMembers = [
   {
     name: "Paresh Sampat",
     role: "Founder & Director",
-    description: "Leading Trinity Services since its inception, Paresh brings over 30 years of experience in global sourcing and manufacturing partnerships.",
+    description: "Leading Mamazon since its inception, Paresh brings over 30 years of experience in global sourcing and manufacturing partnerships.",
   },
   {
     name: "Nishant Pandit",
@@ -26,7 +26,7 @@ const teamMembers = [
 ];
 
 const companies = [
-  { name: "Trinity Services", logo: "TRINITY" },
+  { name: "Mamazon Services", logo: "MAMAZON" },
   { name: "RR Designs", logo: "RR" },
   { name: "Colorcraft International", logo: "CC" },
   { name: "Design Studio", logo: "DS" },
@@ -36,7 +36,7 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-trinity-charcoal">
+      <section className="pt-32 pb-16 bg-mamazon-charcoal">
         <div className="container mx-auto px-6 text-center">
           <AnimatedSection>
             <h1 className="section-title mb-6">YOUR PREFERRED SOURCING PARTNER</h1>
@@ -81,7 +81,7 @@ const About = () => {
       </section>
 
       {/* The Team Section */}
-      <section className="py-24 bg-trinity-charcoal">
+      <section className="py-24 bg-mamazon-charcoal">
         <div className="container mx-auto px-6">
           <AnimatedSection className="text-center mb-16">
             <h2 className="section-title mb-4">THE TEAM</h2>
@@ -92,13 +92,13 @@ const About = () => {
             {teamMembers.map((member, index) => (
               <AnimatedSection key={member.name} delay={index * 0.15}>
                 <div className="flex gap-6 items-start">
-                  <div className="w-24 h-24 bg-trinity-charcoal-light rounded-lg flex-shrink-0 flex items-center justify-center">
-                    <span className="text-2xl font-display text-trinity-sand">
+                  <div className="w-24 h-24 bg-mamazon-charcoal-light rounded-lg flex-shrink-0 flex items-center justify-center">
+                    <span className="text-2xl font-display text-mamazon-gold">
                       {member.name.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
                   <div>
-                    <h3 className="font-display text-xl tracking-wider text-trinity-sand mb-1">
+                    <h3 className="font-display text-xl tracking-wider text-mamazon-gold mb-1">
                       {member.role}
                     </h3>
                     <p className="text-foreground font-medium mb-2">{member.name}</p>
@@ -124,7 +124,7 @@ const About = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {companies.map((company, index) => (
               <AnimatedSection key={company.name} delay={index * 0.1}>
-                <div className="aspect-square bg-card rounded-lg flex items-center justify-center border border-border hover:border-trinity-red transition-colors cursor-pointer">
+                <div className="aspect-square bg-card rounded-lg flex items-center justify-center border border-border hover:border-mamazon-teal transition-colors cursor-pointer">
                   <div className="text-center">
                     <span className="font-display text-2xl tracking-wider text-foreground">
                       {company.logo}
