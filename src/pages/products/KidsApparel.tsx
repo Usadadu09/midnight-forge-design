@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Layout } from "@/components/Layout";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { Lightbox } from "@/components/Lightbox";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import boy1 from "@/assets/kids/boy-1.jpg";
@@ -19,8 +21,17 @@ import kidsHero from "@/assets/products/kids-apparel.jpg";
 const boysImages = [boy1, boy2, boy3, boy4, boy5, boy1, boy2, boy3, boy4];
 const girlsImages = [girl1, girl2, girl3, girl4, girl1, girl2, girl3, girl4];
 const embellishImages = [embellish1, embellish2, embellish3, embellish1, embellish2, embellish3];
+const allImages = [...boysImages, ...girlsImages, ...embellishImages];
 
 const KidsApparel = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const openLightbox = (globalIndex: number) => {
+    setLightboxIndex(globalIndex);
+    setLightboxOpen(true);
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -62,7 +73,7 @@ const KidsApparel = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="font-display text-2xl tracking-[0.3em] text-trinity-sand border-b border-border pb-4 inline-block">
+            <h2 className="font-display text-2xl tracking-[0.3em] text-mamazon-gold border-b border-border pb-4 inline-block">
               BOYS
             </h2>
           </AnimatedSection>
@@ -70,7 +81,10 @@ const KidsApparel = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {boysImages.map((image, index) => (
               <AnimatedSection key={`boy-${index}`} delay={index * 0.05}>
-                <div className="aspect-square overflow-hidden rounded-lg bg-card group cursor-pointer">
+                <div 
+                  className="aspect-square overflow-hidden rounded-lg bg-card group cursor-pointer"
+                  onClick={() => openLightbox(index)}
+                >
                   <img
                     src={image}
                     alt={`Boys apparel ${index + 1}`}
@@ -88,10 +102,10 @@ const KidsApparel = () => {
       </section>
 
       {/* Girls Section */}
-      <section className="py-16 bg-trinity-charcoal">
+      <section className="py-16 bg-mamazon-charcoal">
         <div className="container mx-auto px-6">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="font-display text-2xl tracking-[0.3em] text-trinity-sand border-b border-border pb-4 inline-block">
+            <h2 className="font-display text-2xl tracking-[0.3em] text-mamazon-gold border-b border-border pb-4 inline-block">
               GIRLS
             </h2>
           </AnimatedSection>
@@ -99,7 +113,10 @@ const KidsApparel = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {girlsImages.map((image, index) => (
               <AnimatedSection key={`girl-${index}`} delay={index * 0.05}>
-                <div className="aspect-[3/4] overflow-hidden rounded-lg bg-card group cursor-pointer">
+                <div 
+                  className="aspect-[3/4] overflow-hidden rounded-lg bg-card group cursor-pointer"
+                  onClick={() => openLightbox(boysImages.length + index)}
+                >
                   <img
                     src={image}
                     alt={`Girls apparel ${index + 1}`}
@@ -120,7 +137,7 @@ const KidsApparel = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="font-display text-2xl tracking-[0.3em] text-trinity-sand border-b border-border pb-4 inline-block">
+            <h2 className="font-display text-2xl tracking-[0.3em] text-mamazon-gold border-b border-border pb-4 inline-block">
               EMBELLISHMENTS
             </h2>
           </AnimatedSection>
@@ -128,7 +145,10 @@ const KidsApparel = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {embellishImages.map((image, index) => (
               <AnimatedSection key={`embellish-${index}`} delay={index * 0.05}>
-                <div className="aspect-square overflow-hidden rounded-lg bg-card group cursor-pointer">
+                <div 
+                  className="aspect-square overflow-hidden rounded-lg bg-card group cursor-pointer"
+                  onClick={() => openLightbox(boysImages.length + girlsImages.length + index)}
+                >
                   <img
                     src={image}
                     alt={`Embellishment ${index + 1}`}
@@ -144,6 +164,14 @@ const KidsApparel = () => {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* Lightbox */}
+      <Lightbox
+        images={allImages}
+        initialIndex={lightboxIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+      />
     </Layout>
   );
 };

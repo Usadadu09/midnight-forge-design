@@ -6,65 +6,65 @@
 
 @layer base {
   :root {
-    /* Trinity Services - Midnight Dark Mode with Deep Red & Sand accents */
-    --background: 0 0% 7%;
-    --foreground: 40 20% 95%;
+    /* Mamazon - Midnight Dark Mode with Teal/Cyan & Gold accents */
+    --background: 220 20% 6%;
+    --foreground: 45 20% 95%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 40 20% 95%;
+    --card: 220 20% 9%;
+    --card-foreground: 45 20% 95%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 40 20% 95%;
+    --popover: 220 20% 9%;
+    --popover-foreground: 45 20% 95%;
 
-    --primary: 348 70% 35%;
-    --primary-foreground: 40 20% 95%;
+    --primary: 175 70% 42%;
+    --primary-foreground: 220 20% 6%;
 
-    --secondary: 35 30% 75%;
-    --secondary-foreground: 0 0% 7%;
+    --secondary: 45 60% 70%;
+    --secondary-foreground: 220 20% 6%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 40 10% 60%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 55%;
 
-    --accent: 35 40% 85%;
-    --accent-foreground: 0 0% 7%;
+    --accent: 45 70% 65%;
+    --accent-foreground: 220 20% 6%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 40 20% 95%;
+    --destructive-foreground: 45 20% 95%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 348 70% 35%;
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 175 70% 42%;
 
     --radius: 0.5rem;
 
-    /* Custom Trinity Colors */
-    --trinity-red: 348 70% 35%;
-    --trinity-dark-red: 348 75% 25%;
-    --trinity-sand: 35 30% 75%;
-    --trinity-sand-light: 40 40% 85%;
-    --trinity-charcoal: 0 0% 12%;
-    --trinity-charcoal-dark: 0 0% 7%;
-    --trinity-charcoal-light: 0 0% 18%;
-    --trinity-gold: 40 60% 50%;
+    /* Custom Mamazon Colors */
+    --mamazon-teal: 175 70% 42%;
+    --mamazon-teal-dark: 175 75% 32%;
+    --mamazon-gold: 45 80% 55%;
+    --mamazon-gold-light: 45 70% 70%;
+    --mamazon-charcoal: 220 20% 10%;
+    --mamazon-charcoal-dark: 220 20% 6%;
+    --mamazon-charcoal-light: 220 15% 16%;
+    --mamazon-cyan: 185 80% 50%;
 
     /* Sidebar */
-    --sidebar-background: 0 0% 10%;
-    --sidebar-foreground: 40 20% 95%;
-    --sidebar-primary: 348 70% 35%;
-    --sidebar-primary-foreground: 40 20% 95%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 40 20% 95%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 348 70% 35%;
+    --sidebar-background: 220 20% 9%;
+    --sidebar-foreground: 45 20% 95%;
+    --sidebar-primary: 175 70% 42%;
+    --sidebar-primary-foreground: 220 20% 6%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 45 20% 95%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 175 70% 42%;
 
     /* Glassmorphism */
-    --glass-bg: 0 0% 7% / 0.8;
-    --glass-border: 0 0% 100% / 0.1;
+    --glass-bg: 220 20% 6% / 0.85;
+    --glass-border: 175 70% 42% / 0.15;
   }
 
   .dark {
-    --background: 0 0% 7%;
-    --foreground: 40 20% 95%;
+    --background: 220 20% 6%;
+    --foreground: 45 20% 95%;
   }
 }
 
@@ -98,7 +98,7 @@
   .section-title {
     font-family: 'Oswald', sans-serif;
     @apply text-3xl md:text-4xl lg:text-5xl font-medium tracking-wider uppercase;
-    color: hsl(var(--trinity-sand));
+    color: hsl(var(--mamazon-gold));
   }
 
   .section-subtitle {
@@ -117,7 +117,7 @@
 
   .product-card:hover {
     @apply scale-[1.02];
-    box-shadow: 0 25px 50px -12px hsl(var(--trinity-red) / 0.15);
+    box-shadow: 0 25px 50px -12px hsl(var(--mamazon-teal) / 0.25);
   }
 
   .product-card img {
@@ -149,12 +149,12 @@
     @apply w-full;
   }
 
-  .trinity-logo {
-    @apply px-3 py-1.5 border-2 font-bold tracking-widest text-lg;
+  .mamazon-logo {
+    @apply px-4 py-2 font-bold tracking-wider text-xl rounded-md;
     font-family: 'Oswald', sans-serif;
-    border-color: hsl(var(--trinity-red));
-    background: hsl(var(--trinity-red));
+    background: linear-gradient(135deg, hsl(var(--mamazon-teal)), hsl(var(--mamazon-cyan)));
     color: hsl(var(--foreground));
+    box-shadow: 0 4px 20px hsl(var(--mamazon-teal) / 0.3);
   }
 }
 
@@ -187,36 +187,41 @@
     }
   }
 
-  .text-gradient-sand {
+  .text-gradient-gold {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--trinity-sand)), hsl(var(--trinity-sand-light)));
+    background-image: linear-gradient(135deg, hsl(var(--mamazon-gold)), hsl(var(--mamazon-gold-light)));
   }
 
-  .bg-trinity-red {
-    background-color: hsl(var(--trinity-red));
+  .text-gradient-teal {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--mamazon-teal)), hsl(var(--mamazon-cyan)));
   }
 
-  .bg-trinity-charcoal {
-    background-color: hsl(var(--trinity-charcoal));
+  .bg-mamazon-teal {
+    background-color: hsl(var(--mamazon-teal));
   }
 
-  .bg-trinity-charcoal-dark {
-    background-color: hsl(var(--trinity-charcoal-dark));
+  .bg-mamazon-charcoal {
+    background-color: hsl(var(--mamazon-charcoal));
   }
 
-  .bg-trinity-sand {
-    background-color: hsl(var(--trinity-sand));
+  .bg-mamazon-charcoal-dark {
+    background-color: hsl(var(--mamazon-charcoal-dark));
   }
 
-  .text-trinity-sand {
-    color: hsl(var(--trinity-sand));
+  .bg-mamazon-gold {
+    background-color: hsl(var(--mamazon-gold));
   }
 
-  .text-trinity-red {
-    color: hsl(var(--trinity-red));
+  .text-mamazon-gold {
+    color: hsl(var(--mamazon-gold));
   }
 
-  .border-trinity-red {
-    border-color: hsl(var(--trinity-red));
+  .text-mamazon-teal {
+    color: hsl(var(--mamazon-teal));
+  }
+
+  .border-mamazon-teal {
+    border-color: hsl(var(--mamazon-teal));
   }
 }

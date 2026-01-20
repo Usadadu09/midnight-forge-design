@@ -48,7 +48,7 @@ const licensedBrands = [
 const LogoCard = ({ name, color, size = "normal" }: { name: string; color: string; size?: "normal" | "small" }) => (
   <div 
     className={`group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 
-    hover:border-trinity-red/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-trinity-red/20
+    hover:border-mamazon-teal/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-mamazon-teal/20
     ${size === "small" ? "p-4" : "p-6"}`}
   >
     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -72,12 +72,12 @@ const SupplyChain = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-trinity-charcoal via-trinity-charcoal-dark to-trinity-charcoal relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-trinity-red/5 via-transparent to-transparent" />
+      <section className="pt-32 pb-20 bg-gradient-to-b from-mamazon-charcoal via-mamazon-charcoal-dark to-mamazon-charcoal relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-mamazon-teal/5 via-transparent to-transparent" />
         <div className="container mx-auto px-6 text-center relative z-10">
           <AnimatedSection>
             <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground mb-6 tracking-tight">
-              GLOBAL <span className="text-trinity-red">PARTNERS</span>
+              GLOBAL <span className="text-mamazon-teal">PARTNERS</span>
             </h1>
             <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
               Over the years we have earned the trust of hundreds of buyers & importers, brands and retailers 
@@ -89,11 +89,11 @@ const SupplyChain = () => {
       </section>
 
       {/* Retailers Logo Wall */}
-      <section className="py-20 bg-trinity-charcoal-dark relative">
+      <section className="py-20 bg-mamazon-charcoal-dark relative">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
         <div className="container mx-auto px-6 relative z-10">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-sm font-display tracking-[0.3em] text-trinity-red mb-4">TRUSTED BY</h2>
+            <h2 className="text-sm font-display tracking-[0.3em] text-mamazon-teal mb-4">TRUSTED BY</h2>
             <h3 className="text-3xl md:text-4xl font-display font-bold text-foreground">LEADING RETAILERS</h3>
           </AnimatedSection>
 
@@ -108,11 +108,11 @@ const SupplyChain = () => {
       </section>
 
       {/* Brands Section */}
-      <section className="py-24 bg-trinity-charcoal relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-trinity-red to-transparent" />
+      <section className="py-24 bg-mamazon-charcoal relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-mamazon-teal to-transparent" />
         <div className="container mx-auto px-6">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-sm font-display tracking-[0.3em] text-trinity-sand mb-4">MANUFACTURED FOR</h2>
+            <h2 className="text-sm font-display tracking-[0.3em] text-mamazon-gold mb-4">MANUFACTURED FOR</h2>
             <h3 className="text-3xl md:text-4xl font-display font-bold text-foreground">PREMIUM BRANDS</h3>
           </AnimatedSection>
 
@@ -126,7 +126,7 @@ const SupplyChain = () => {
 
           {/* Licensed Brands */}
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-sm font-display tracking-[0.3em] text-trinity-red mb-4">LICENSED</h2>
+            <h2 className="text-sm font-display tracking-[0.3em] text-mamazon-teal mb-4">LICENSED</h2>
             <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground">CHARACTER BRANDS</h3>
           </AnimatedSection>
 
@@ -141,14 +141,14 @@ const SupplyChain = () => {
       </section>
 
       {/* Global Reach with Enhanced Map */}
-      <section className="py-24 bg-gradient-to-b from-trinity-charcoal-dark to-trinity-charcoal relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-b from-mamazon-charcoal-dark to-mamazon-charcoal relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-trinity-red rounded-full blur-[150px]" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-trinity-sand rounded-full blur-[150px]" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-mamazon-teal rounded-full blur-[150px]" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-mamazon-gold rounded-full blur-[150px]" />
         </div>
         <div className="container mx-auto px-6 relative z-10">
           <AnimatedSection className="text-center">
-            <h2 className="text-sm font-display tracking-[0.3em] text-trinity-red mb-4">SOURCING NETWORK</h2>
+            <h2 className="text-sm font-display tracking-[0.3em] text-mamazon-teal mb-4">SOURCING NETWORK</h2>
             <h3 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-8">GLOBAL REACH</h3>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-16 text-lg">
               Our sourcing network spans across major manufacturing hubs in Asia, 
@@ -159,11 +159,11 @@ const SupplyChain = () => {
               {["India", "Bangladesh", "Nepal", "Sri Lanka", "Thailand", "Myanmar", "Malaysia"].map((country, index) => (
                 <AnimatedSection key={country} delay={index * 0.1}>
                   <div className="group relative px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full 
-                    hover:border-trinity-red hover:bg-trinity-red/10 transition-all duration-500 cursor-pointer">
-                    <span className="font-display tracking-wider text-foreground group-hover:text-trinity-red transition-colors">
+                    hover:border-mamazon-teal hover:bg-mamazon-teal/10 transition-all duration-500 cursor-pointer">
+                    <span className="font-display tracking-wider text-foreground group-hover:text-mamazon-teal transition-colors">
                       {country}
                     </span>
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-trinity-red rounded-full opacity-0 group-hover:opacity-100 
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-mamazon-teal rounded-full opacity-0 group-hover:opacity-100 
                       transition-opacity duration-300 animate-pulse" />
                   </div>
                 </AnimatedSection>
