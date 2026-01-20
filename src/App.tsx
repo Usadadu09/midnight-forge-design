@@ -10,6 +10,8 @@ import Services from "./pages/Services";
 import SupplyChain from "./pages/SupplyChain";
 import Sustainability from "./pages/Sustainability";
 import Contact from "./pages/Contact";
+import KidsApparel from "./pages/products/KidsApparel";
+import ProductDetail from "./pages/products/ProductDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +25,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/products/kids" element={<KidsApparel />} />
+          <Route path="/products/:category" element={<ProductDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/supply-chain" element={<SupplyChain />} />
